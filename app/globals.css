@@ -1,0 +1,122 @@
+/* globals.css */
+
+@import "tailwindcss";
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* BRAND COLORS */
+  --salt-primary: #4f7134;
+  --salt-primary-dark: #3d5a28;
+  --salt-primary-darker: #2e4420;
+
+  --salt-accent: #f2d89c;
+  --salt-accent-dark: #c6a848;
+
+  --salt-gradient-mid: #6b8e4e;
+  --salt-gradient-end: #d4c374;
+
+  --salt-border-light: #1a1a1a14;
+
+  /* FALLBACK FONT */
+  --font-brand-fallback: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   TAILWIND TOKENS
+========================= */
+
+@theme inline {
+  /* COLORS */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--salt-primary);
+  --color-primary-dark: var(--salt-primary-dark);
+  --color-primary-darker: var(--salt-primary-darker);
+
+  --color-accent: var(--salt-accent);
+  --color-accent-dark: var(--salt-accent-dark);
+
+  --color-gradient-mid: var(--salt-gradient-mid);
+  --color-gradient-end: var(--salt-gradient-end);
+
+  --color-borderLight: var(--salt-border-light);
+
+  /* BRAND FONT */
+  --font-brand: var(--font-lemon);
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #4f7134 !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #4f7134 !important;
+  color: var(--foreground);
+
+  /* NORMAL WEBSITE FONT */
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   SITE WRAPPER
+========================= */
+
+.site-shell {
+  width: min(100%, 1440px);
+  min-height: 100vh;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #4f7134;
+  overflow-x: clip;
+}
+
+/* =========================
+   GLOBAL CONTAINER
+========================= */
+
+.container-site {
+  width: min(100%, 1440px);
+
+  margin-inline: auto;
+}
+
+/* =========================
+   BRAND FONT UTILITIES
+========================= */
+
+.font-brand {
+  font-family: var(--font-lemon), sans-serif;
+}
+
+.heading-brand {
+  font-family: var(--font-lemon), sans-serif;
+  text-transform: uppercase;
+}
