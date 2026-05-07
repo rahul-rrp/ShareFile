@@ -24,13 +24,13 @@ export default function Footer() {
             <span className="italic text-accent">STAYZ</span>
           </Link>
           <p className="text-sm text-gray-300 leading-relaxed max-w-xs">
-            Premium boutique hotels across India's finest destinations. Curated for modern travellers.
+            Premium boutique hotels across India&apos;s finest destinations. Curated for modern travellers.
           </p>
         </div>
 
         {/* Cities Column */}
         <div className="lg:col-span-1">
-          <h4 className="text-xs font-bold uppercase tracking-widest text-accent mb-6">Cities We're In</h4>
+          <h4 className="text-xs font-bold uppercase tracking-widest text-accent mb-6">Cities We&apos;re In</h4>
           <div className="flex flex-wrap gap-3">
             {cities.map((city) => (
               <button

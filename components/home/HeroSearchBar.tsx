@@ -26,7 +26,7 @@ export default function HeroSearchBar() {
   const [checkIn, setCheckIn] = useState<Date | null>(null);
   const [checkOut, setCheckOut] = useState<Date | null>(null);
 
-  const [errors, setErrors] = useState({ selection: false, dates: false });
+  const [, setErrors] = useState({ selection: false, dates: false });
   const [showDropdown, setShowDropdown] = useState(false);
   const [showMobileCalendar, setShowMobileCalendar] = useState(false);
   const [showDesktopCalendar, setShowDesktopCalendar] = useState(false);
@@ -66,7 +66,7 @@ export default function HeroSearchBar() {
       console.log("Searching for:", { selection, checkIn, checkOut });
       alert("Search initiated!");
     } else {
-      let errorMsg = "Please ";
+      const errorMsg = "Please ";
       const missing = [];
       if (newErrors.selection) missing.push("choose a city or property");
       if (newErrors.dates) missing.push("choose dates");
@@ -121,7 +121,7 @@ export default function HeroSearchBar() {
               <div
                 key={day}
                 onClick={() => handleDateClick(day, month, year)}
-                className={`w-9 h-9 md:w-10 md:h-10 mx-auto flex items-center justify-center font-medium
+                className={`w-9 h-9 md:w-10 md:h-10 mx-auto flex items-center justify-center font-medium text-xs
                   ${isPast ? 'text-gray-300 cursor-not-allowed' : 'cursor-pointer text-gray-700'}
                   ${isCheckIn || isCheckOut ? 'bg-[#4c6742] text-white rounded-full shadow-md' : ''}
                   ${isInRange ? 'bg-green-50 text-[#4c6742]' : ''}
@@ -179,7 +179,7 @@ export default function HeroSearchBar() {
                 <div
                   key={c}
                   onClick={(e) => { e.stopPropagation(); setSelection({ type: 'city', value: c }); setErrors(prev => ({ ...prev, selection: false })); setShowDropdown(false); }}
-                  className="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm font-semibold text-gray-800 flex items-center"
+                  className="px-2 py-1 hover:bg-gray-50 cursor-pointer text-sm font-semibold text-gray-800 flex items-center"
                 >
                   <MapPin className="w-4 h-4 mr-2 text-gray-400 flex-shrink-0" />
                   <span>{c}</span>
@@ -191,7 +191,7 @@ export default function HeroSearchBar() {
                 <div
                   key={h}
                   onClick={(e) => { e.stopPropagation(); setSelection({ type: 'hotel', value: h }); setErrors(prev => ({ ...prev, selection: false })); setShowDropdown(false); }}
-                  className="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm font-semibold text-gray-800 flex items-center"
+                  className="px-2 py-1 hover:bg-gray-50 cursor-pointer text-sm font-semibold text-gray-800 flex items-center"
                 >
                   <Building className="w-4 h-4 mr-2 text-gray-400 flex-shrink-0" />
                   <span className="truncate">{h}</span>
@@ -237,7 +237,7 @@ export default function HeroSearchBar() {
           {/* Desktop Calendar Dropdown */}
           {showDesktopCalendar && (
             <div className="hidden md:block absolute top-full left-0 md:-left-20 mt-4 bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-8 z-50 w-[750px] cursor-default">
-              <div className="flex justify-between items-center mb-6 px-4">
+              <div className="flex justify-between items-center mb-6 px-4 pb-6 border-b border-gray-400">
                  <div className="flex space-x-12">
                     <div className="flex flex-col">
                       <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Check-in</span>
@@ -248,6 +248,15 @@ export default function HeroSearchBar() {
                       <span className="text-xl font-bold text-gray-800">{checkOut ? checkOut.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Add dates'}</span>
                     </div>
                  </div>
+
+                 <div className="flex justify-between items-center mt-2 pt-4 ">
+                <button 
+                  onClick={() => setShowDesktopCalendar(false)}
+                  className="bg-primary text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#3d5335] transition-colors"
+                >
+                  Apply Dates {checkIn && checkOut ? `(${Math.ceil((checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24))} Night${Math.ceil((checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24)) > 1 ? 's' : ''})` : ''}
+                </button>
+              </div>
               </div>
 
               <div className="flex space-x-8">
@@ -263,21 +272,6 @@ export default function HeroSearchBar() {
                   </div>
                   {renderMonth(1, true)}
                 </div>
-              </div>
-
-              <div className="flex justify-between items-center mt-2 pt-4 border-t">
-                <div className="flex items-center">
-                  <div className="w-10 h-6 bg-gray-200 rounded-full flex items-center px-1 mr-3 cursor-pointer">
-                    <div className="w-4 h-4 bg-white rounded-full shadow-sm"></div>
-                  </div>
-                  <span className="text-sm font-semibold text-gray-600">I want to see Day Use hourly rates only</span>
-                </div>
-                <button 
-                  onClick={() => setShowDesktopCalendar(false)}
-                  className="bg-[#4c6742] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#3d5335] transition-colors"
-                >
-                  Apply Dates {checkIn && checkOut ? `(${Math.ceil((checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24))} Night${Math.ceil((checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24)) > 1 ? 's' : ''})` : ''}
-                </button>
               </div>
             </div>
           )}

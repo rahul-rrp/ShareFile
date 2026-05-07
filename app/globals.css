@@ -27,6 +27,23 @@
   --font-brand-fallback: Arial, Helvetica, sans-serif;
 }
 
+
+/* =========================
+   CUSTOM GRADIENTS
+========================= */
+
+.bg-primary-gradient {
+  background: linear-gradient(180deg, #F5F3EC 0%, #FFFFFF 100%);
+}
+
+.bg-gold-primary {
+  background: #A88830;
+}
+
+.text-gold-primary {
+  color: #A88830;
+}
+
 /* =========================
    TAILWIND TOKENS
 ========================= */

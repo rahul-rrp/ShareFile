@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import {
   Search,
   ChevronDown,
@@ -10,6 +12,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import Logo from "./Logo";
 
 const destinations = [
   { name: "Delhi", hotels: 8 },
@@ -84,46 +87,8 @@ export default function Navbar() {
         >
           {/* LEFT SECTION */}
           <div className="flex items-center gap-12">
-
             {/* LOGO */}
-            <Link
-              href="/"
-              className="flex items-center h-[42px]"
-            >
-              <span
-                className="
-      font-brand
-      text-[clamp(2.4rem,11vw,3.5rem)]
-      md:text-[28px]
-      font-extrabold
-      uppercase
-      tracking-[1.12px]
-      md:tracking-[0.56px]
-      leading-none
-      text-primary
-    "
-              >
-                SALT
-              </span>
-
-              <span
-                className="
-      font-brand
-      text-[clamp(2.4rem,11vw,3.5rem)]
-      md:text-[28px]
-      font-bold
-      italic
-      uppercase
-      tracking-[1.12px]
-      md:tracking-[0.56px]
-      leading-none
-      text-primary
-      relative top-[1px]
-    "
-              >
-                STAYZ
-              </span>
-            </Link>
+            <Logo />
 
             {/* DESKTOP NAVIGATION */}
             <div className="hidden md:flex items-center gap-8 text-[14px] font-bold leading-[21px] tracking-[0.14px]">
