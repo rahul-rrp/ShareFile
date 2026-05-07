@@ -22,11 +22,11 @@ export default function HotelCategorySection({
   const desktopColumns = columns === 3 ? "xl:grid-cols-3" : "xl:grid-cols-4";
 
   return (
-    <section className="w-full pt-[40px] pb-[40px] md:pt-[56px]">
-      <div className="container-site px-6 md:px-[48px] flex flex-col gap-6 md:gap-[28px]">
+    <section className="w-full pt-[56px] pb-[40px]">
+      <div className="container-site px-[48px] flex flex-col gap-[28px]">
         <div className="mb-8 flex items-end justify-between gap-4">
-          <h2 className="font-brand text-[20px] font-bold uppercase leading-none text-[#1f241f] sm:text-[24px] md:text-[34px] whitespace-nowrap">
-            <span className="font-normal italic text-[#a88830]">
+          <h2 className="font-brand text-[28px] font-bold uppercase leading-none text-[#1f241f] md:text-[34px]">
+            <span className="font-normal italic text-[#b08a28]">
               {accent}
             </span>{" "}
             {title}
@@ -41,24 +41,17 @@ export default function HotelCategorySection({
         </div>
 
         <div
-          className={`
-      -mx-6
-      flex
-      snap-x
-      gap-5
-      overflow-x-auto
-      px-6
-      pb-4
+          className="
+    grid
+    grid-cols-1
+    md:grid-cols-2
+    xl:grid-cols-4
 
-      md:mx-0
-      md:grid
-      md:grid-cols-2
-      md:overflow-visible
-      md:px-0
-      md:pb-0
+    gap-x-[20px]
+    gap-y-[20px]
 
-      ${desktopColumns}
-    `}
+    w-full
+  "
         >
           {hotels.map((hotel) => (
             <div key={hotel.title} className="snap-start">

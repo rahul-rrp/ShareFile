@@ -55,12 +55,12 @@ const destinations = [
 
 export default function DestinationsForYou() {
   return (
-    <section className="w-full pt-[40px] pb-[40px] md:pt-[56px]">
-      <div className="container-site px-6 md:px-[48px] flex flex-col gap-6 md:gap-[28px]">
+    <section className="w-full pt-[56px] pb-[40px]">
+      <div className="container-site px-[48px] flex flex-col gap-[28px]">
         <div className="mb-8 flex items-end justify-between gap-4">
-          <h2 className="font-brand text-[20px] font-bold uppercase leading-none text-[#1f241f] sm:text-[24px] md:text-[34px] whitespace-nowrap">
+          <h2 className="font-brand text-[28px] font-bold uppercase leading-none text-[#1f241f] md:text-[34px]">
             Destinations{" "}
-            <span className="font-normal italic text-[#a88830]">
+            <span className="font-normal italic text-[#9f8428]">
               For You
             </span>
           </h2>
@@ -73,32 +73,12 @@ export default function DestinationsForYou() {
           </Link>
         </div>
 
-        <div
-          className="
-    -mx-6
-    flex
-    snap-x
-    gap-5
-    overflow-x-auto
-    px-6
-    pb-4
-
-    md:mx-0
-    md:grid
-    md:grid-cols-3
-    md:overflow-visible
-    md:px-0
-    md:pb-0
-
-    lg:grid-cols-5
-    xl:grid-cols-6
-  "
-        >
+        <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
           {destinations.map((destination) => (
             <Link
               key={destination.name}
               href={destination.href}
-              className="group block min-w-[120px] snap-start"
+              className="group block"
               aria-label={`View hotels in ${destination.name}`}
             >
               <div

@@ -103,21 +103,31 @@ export default function HotelCard({
       <div className="flex flex-1 flex-col p-4">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h3 className="line-clamp-2 text-[14px] font-bold leading-[20px] text-[#1f241f]">
+            <h3 className="line-clamp-2 text-[14px] font-Calibri font-bold leading-[20px] text-[#1f241f]">
               {title}
             </h3>
 
-            <div className="mt-2 flex items-center gap-1 text-[#6f7567]">
-              <MapPin className="h-3 w-3 shrink-0" />
-              <p className="truncate text-[10px] font-bold uppercase tracking-[0.6px]">
-                {location}
-              </p>
-            </div>
-          </div>
+            <div className="mt-2 flex items-center justify-between gap-3">
 
-          <div className="flex shrink-0 items-center gap-1 rounded-[4px] bg-primary px-2 py-1 text-white">
-            <Star className="h-3 w-3 fill-white" />
-            <span className="text-[11px] font-bold">{rating.toFixed(1)}</span>
+              {/* LEFT - LOCATION */}
+              <div className="flex items-center gap-1 text-[#6f7567] min-w-0">
+                <MapPin className="h-3 w-3 shrink-0" />
+
+                <p className="truncate text-[10px] font-calibri font-bold uppercase tracking-[0.6px]">
+                  {location}
+                </p>
+              </div>
+
+              {/* RIGHT - RATING */}
+              <div className="flex shrink-0 items-center ml-25 gap-1 rounded-[4px] bg-primary px-2 py-1">
+                <Star className="h-3 w-3 fill-[#F2D98C] stroke-[#F2D98C]" />
+
+                <span className="text-[11px] font-bold text-[#F2D98C]">
+                  {rating.toFixed(1)}
+                </span>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -125,7 +135,7 @@ export default function HotelCard({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-[3px] bg-[#edf4df] px-2 py-1 text-[9px] font-bold text-primary"
+              className="rounded-[3px] bg-[#edf4df] font-Calibri px-2 py-1 text-[9px] font-bold text-primary"
             >
               {tag}
             </span>

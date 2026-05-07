@@ -260,18 +260,18 @@ export default function Navbar() {
             {/* BODY */}
             <div className="flex-1 overflow-y-auto px-6 py-6 space-y-3">
 
-              <Link href="/" className="block font-bold text-primary">
+              <Link href="/" className="block font-calibri font-bold text-primary">
                 Home
               </Link>
 
-              <Link href="/beyond" className="block font-bold text-dark">
+              <Link href="/beyond" className="block font-calibri font-bold text-dark">
                 Beyond
               </Link>
 
               <div className="border-t border-gray-100 pt-3">
                 <button
                   onClick={() => setDestOpen((open) => !open)}
-                  className="flex w-full items-center justify-between py-2 font-bold text-dark"
+                  className="flex w-full items-center font-calibri justify-between py-2 font-bold text-dark"
                 >
                   Destinations
                   <ChevronDown
@@ -299,7 +299,7 @@ export default function Navbar() {
               <div className="border-t border-gray-100 pt-3">
                 <button
                   onClick={() => setCatOpen((open) => !open)}
-                  className="flex w-full items-center justify-between py-2 font-bold text-dark"
+                  className="flex w-full items-center font-calibri justify-between py-2 font-bold text-dark"
                 >
                   Categories
                   <ChevronDown
@@ -314,7 +314,7 @@ export default function Navbar() {
                         key={category.name}
                         href={`/categories/${category.name.toLowerCase().replace(/\s+/g, "-")}`}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center gap-3 rounded-xl bg-gray-50 px-3 py-3"
+                        className="flex items-center font-calibri gap-3 rounded-xl bg-gray-50 px-3 py-3"
                       >
                         <Building className="w-4 h-4 text-gray-400" />
                         <span className="flex flex-col">
