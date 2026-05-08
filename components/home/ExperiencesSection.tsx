@@ -41,9 +41,9 @@ export default function ExperiencesSection() {
     <section className="w-full pt-[40px] pb-[40px] md:pt-[56px]">
       <div className="container-site px-6 md:px-[48px] flex flex-col gap-6 md:gap-[28px]">
         <div className="mb-8 flex items-end justify-between gap-4">
-          <h2 className="font-brand text-[20px] font-bold uppercase leading-none text-[#1f241f] sm:text-[24px] md:text-[34px] whitespace-nowrap">
+          <h2 className="font-brand text-[20px] font-bold uppercase leading-none text-black-primary sm:text-[24px] md:text-[34px] whitespace-nowrap">
             DINE, GATHER &{" "}
-            <span className="font-normal italic text-[#a88830]">CELEBRATE</span>
+            <span className="font-normal italic text-gold-primary">CELEBRATE</span>
           </h2>
 
           <Link
@@ -91,16 +91,16 @@ export default function ExperiencesSection() {
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <p className="text-[13px] leading-relaxed text-[#6d7168]">
+                <p className="text-[14px] font-Calibri leading-relaxed text-[#6A6A66]">
                   {card.description}
                 </p>
                 <div className="mt-auto pt-6">
-                  <p className="text-[11px] font-bold text-[#1f241f]">
+                  <p className="text-[12px] font-Calibri font-bold text-primary">
                     {card.stats}
                   </p>
                   <Link
                     href={card.link}
-                    className="mt-3 flex items-center gap-1.5 text-[12px] font-bold text-primary transition hover:gap-2"
+                    className="mt-3 flex items-center font-Calibri gap-1.5 text-[12px] font-bold text-primary transition hover:gap-2"
                   >
                     {card.linkText} <ArrowRight className="h-3.5 w-3.5" />
                   </Link>

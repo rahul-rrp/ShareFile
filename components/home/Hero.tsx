@@ -30,7 +30,6 @@ export default function Hero() {
           z-20
           w-full
           h-full
-          max-w-[1280px]
           mx-auto
           flex
           flex-col

@@ -40,9 +40,9 @@ export default function PressSection() {
     <section className="w-full pt-[40px] pb-[40px] md:pt-[56px]">
       <div className="container-site px-6 md:px-[48px] flex flex-col gap-6 md:gap-[28px]">
         <div className="mb-8 flex items-end justify-between gap-4">
-          <h2 className="font-brand text-[20px] font-bold uppercase leading-none text-[#1f241f] sm:text-[24px] md:text-[34px] whitespace-nowrap">
+          <h2 className="font-brand text-[20px] font-bold uppercase leading-none text-black-primary sm:text-[24px] md:text-[34px] whitespace-nowrap">
             WHAT PEOPLE ARE{" "}
-            <span className="font-normal italic text-[#a88830]">WRITING</span>
+            <span className="font-normal italic text-gold-primary">WRITING</span>
           </h2>
 
           <Link
@@ -82,20 +82,20 @@ export default function PressSection() {
                 className="aspect-[16/10] w-full p-6"
                 style={{ backgroundColor: article.color }}
               >
-                <span className="inline-block rounded-sm bg-white/10 px-2 py-1 text-[9px] font-bold tracking-wider text-white backdrop-blur-md">
+                <span className="inline-block h-[22px] rounded-[4px] bg-white px-[9px] py-[4px] text-[9px] font-brand font-bold tracking-wider text-primary opacity-100 backdrop-blur-md">
                   {article.source}
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <p className="text-[10px] font-bold text-[#a88830]">
+                <p className="text-[10px] font-bold font-Calibri text-[#6A6A66]">
                   {article.date}
                 </p>
-                <h3 className="mt-3 line-clamp-3 text-[14px] font-bold leading-tight text-[#1f241f]">
+                <h3 className="mt-3 line-clamp-3 text-[14.4px] font-brand font-bold leading-tight text-black-primary">
                   {article.title}
                 </h3>
                 <Link
                   href={article.link}
-                  className="mt-auto pt-6 flex items-center gap-1 text-[11px] font-bold text-primary transition hover:gap-1.5"
+                  className="mt-auto pt-6 flex items-center gap-1 text-[11px] font-Calibri font-bold text-primary transition hover:gap-1.5"
                 >
                   Read article <ArrowRight className="h-3 w-3" />
                 </Link>

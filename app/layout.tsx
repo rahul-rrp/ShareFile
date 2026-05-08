@@ -28,13 +28,43 @@ const geistMono = Geist_Mono({
 const lemonMilk = localFont({
   src: [
     {
-      path: "../public/fonts/LEMONMILK-Bold.otf",
-      weight: "700",
+      path: "../public/fonts/LEMONMILK-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/LEMONMILK-LightItalic.otf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/LEMONMILK-Regular.otf",
+      weight: "400",
       style: "normal",
     },
     {
       path: "../public/fonts/LEMONMILK-RegularItalic.otf",
       weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/LEMONMILK-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/LEMONMILK-MediumItalic.otf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/LEMONMILK-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/LEMONMILK-BoldItalic.otf",
+      weight: "700",
       style: "italic",
     },
   ],

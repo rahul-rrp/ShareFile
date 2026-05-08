@@ -14,6 +14,7 @@
   --salt-primary: #4f7134;
   --salt-primary-dark: #3d5a28;
   --salt-primary-darker: #2e4420;
+  --salt-icon:#4F7134;
 
   --salt-accent: #f2d89c;
   --salt-accent-dark: #c6a848;
@@ -42,6 +43,10 @@
 
 .text-gold-primary {
   color: #A88830;
+}
+
+.text-black-primary {
+  color: #1A1A1A;
 }
 
 .font-calibri {
@@ -127,6 +132,19 @@ body {
   width: min(100%, 1440px);
 
   margin-inline: auto;
+}
+
+/* =========================
+   SCROLL UTILITIES
+========================= */
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* =========================

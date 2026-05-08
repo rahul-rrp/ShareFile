@@ -136,10 +136,10 @@ export default function BeyondRewards() {
     <section className="w-full bg-primary-gradient pt-[56px] pb-[40px]">
       <div className="container-site px-[48px] flex flex-col gap-[28px]">
         <div className="mb-8">
-          <h2 className="font-brand text-[34px] font-bold uppercase leading-[38px] text-[#1f241f] md:text-[42px] md:leading-[46px]">
+          <h2 className="font-brand text-[34px] font-bold uppercase leading-[38px] text-black-primary md:text-[42px] md:leading-[46px]">
             Every stay takes you
             <br />
-            <span className="font-normal italic text-[#b08a28]">
+            <span className="font-normal italic text-gold-primary">
               Beyond
             </span>{" "}
             the ordinary.

@@ -11,9 +11,16 @@ import HotelsForYouSection from "@/components/home/HotelsForYouSection";
 import InstagramSection from "@/components/home/InstagramSection";
 import PressSection from "@/components/home/PressSection";
 
+const hotelCardImages = [
+  "/assets/hotels/hotel1.avif",
+  "/assets/hotels/hotel2.avif",
+  "/assets/hotels/hotel3.avif",
+];
+
 const autographHotels = [
   {
     image: "/assets/hotels/hotel1.avif",
+    images: hotelCardImages,
     badge: "Autograph",
     title: "Saltstayz Autograph, Connaught Place",
     location: "Connaught Place, New Delhi",
@@ -27,6 +34,7 @@ const autographHotels = [
   },
   {
     image: "/assets/hotels/hotel2.avif",
+    images: hotelCardImages,
     badge: "Autograph",
     title: "Saltstayz Autograph, Rishikesh",
     location: "Tapovan, Rishikesh",
@@ -40,6 +48,7 @@ const autographHotels = [
   },
   {
     image: "/assets/hotels/hotel3.avif",
+    images: hotelCardImages,
     badge: "Autograph",
     title: "Saltstayz Autograph, Jaipur",
     location: "Civil Lines, Jaipur",
@@ -53,6 +62,7 @@ const autographHotels = [
   },
   {
     image: "/assets/hotels/hotel1.avif",
+    images: hotelCardImages,
     badge: "Autograph",
     title: "Saltstayz Autograph, Varanasi",
     location: "Assi Ghat, Varanasi",
@@ -69,6 +79,7 @@ const autographHotels = [
 const premierHotels = [
   {
     image: "/assets/hotels/hotel2.avif",
+    images: hotelCardImages,
     badge: "Premier",
     title: "Saltstayz Premier, Bhopal",
     location: "Shahpura, Bhopal",
@@ -82,6 +93,7 @@ const premierHotels = [
   },
   {
     image: "/assets/hotels/hotel3.avif",
+    images: hotelCardImages,
     badge: "Premier",
     title: "Saltstayz Premier, Chandigarh",
     location: "Sector 17, Chandigarh",
@@ -95,6 +107,7 @@ const premierHotels = [
   },
   {
     image: "/assets/hotels/hotel1.avif",
+    images: hotelCardImages,
     badge: "Premier",
     title: "Saltstayz Premier, Bengaluru",
     location: "Indiranagar, Bengaluru",
@@ -111,6 +124,7 @@ const premierHotels = [
 const selectHotels = [
   {
     image: "/assets/hotels/hotel1.avif",
+    images: hotelCardImages,
     badge: "Select",
     title: "Saltstayz Select, Noida 62",
     location: "Sector 62, Noida",
@@ -124,6 +138,7 @@ const selectHotels = [
   },
   {
     image: "/assets/hotels/hotel1.avif",
+    images: hotelCardImages,
     badge: "Select",
     title: "Saltstayz Select, Ujjain",
     location: "Mahakal Lok, Ujjain",
@@ -137,6 +152,7 @@ const selectHotels = [
   },
   {
     image: "/assets/hotels/hotel2.avif",
+    images: hotelCardImages,
     badge: "Select",
     title: "Saltstayz Select, Mohali",
     location: "Phase 7, Mohali",
@@ -150,6 +166,7 @@ const selectHotels = [
   },
   {
     image: "/assets/hotels/hotel2.avif",
+    images: hotelCardImages,
     badge: "Select",
     title: "Saltstayz Select, Mohali",
     location: "Phase 7, Mohali",
@@ -163,6 +180,7 @@ const selectHotels = [
   },
   {
     image: "/assets/hotels/hotel2.avif",
+    images: hotelCardImages,
     badge: "Select",
     title: "Saltstayz Select, Mohali",
     location: "Phase 7, Mohali",
@@ -176,6 +194,7 @@ const selectHotels = [
   },
   {
     image: "/assets/hotels/hotel2.avif",
+    images: hotelCardImages,
     badge: "Select",
     title: "Saltstayz Select, Mohali",
     location: "Phase 7, Mohali",

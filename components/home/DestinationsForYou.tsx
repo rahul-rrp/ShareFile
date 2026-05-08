@@ -58,9 +58,9 @@ export default function DestinationsForYou() {
     <section className="w-full pt-[56px] pb-[40px]">
       <div className="container-site px-[48px] flex flex-col gap-[28px]">
         <div className="mb-8 flex items-end justify-between gap-4">
-          <h2 className="font-brand text-[28px] font-bold uppercase leading-none text-[#1f241f] md:text-[34px]">
+          <h2 className="font-brand text-[28px] font-bold uppercase leading-none text-black-primary md:text-[34px]">
             Destinations{" "}
-            <span className="font-normal italic text-[#9f8428]">
+            <span className="font-normal italic text-gold-primary">
               For You
             </span>
           </h2>
@@ -85,7 +85,7 @@ export default function DestinationsForYou() {
                 className={`aspect-square rounded-[10px] bg-gradient-to-br ${destination.gradient} shadow-[0_12px_26px_rgba(48,51,38,0.16)] transition duration-200 group-hover:-translate-y-1 group-hover:shadow-[0_18px_34px_rgba(48,51,38,0.2)]`}
               />
 
-              <p className="mt-3 text-center text-[11px] font-extrabold uppercase tracking-[0.2px] text-[#1f241f]">
+              <p className="mt-3 text-center text-[15px] font-Calibri font-bold uppercase tracking-[0.2px] text-black-primary">
                 {destination.name}
               </p>
             </Link>

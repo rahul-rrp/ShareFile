@@ -95,14 +95,14 @@ export default function Navbar() {
 
               <Link
                 href="/"
-                className="text-primary transition-colors"
+                className="text-primary font-Calibri transition-colors"
               >
                 Home
               </Link>
 
               <Link
                 href="/beyond"
-                className="text-dark hover:text-primary transition-colors"
+                className="text-dark hover:text-primary font-Calibri transition-colors"
               >
                 Beyond
               </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
               {/* DESTINATIONS */}
               <div className="relative group">
 
-                <button className="flex items-center text-dark hover:text-primary transition-colors">
+                <button className="flex items-center font-Calibri text-dark hover:text-primary transition-colors">
                   Destinations
                   <ChevronDown className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -154,7 +154,7 @@ export default function Navbar() {
               {/* CATEGORIES */}
               <div className="relative group">
 
-                <button className="flex items-center text-dark hover:text-primary transition-colors">
+                <button className="flex items-center font-Calibri text-dark hover:text-primary transition-colors">
                   Categories
                   <ChevronDown className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -208,7 +208,7 @@ export default function Navbar() {
           {/* RIGHT SECTION */}
           <div className="flex items-center gap-8 md:gap-4">
 
-            <button className="flex text-dark hover:text-primary transition-colors" aria-label="Search">
+            <button className="flex font-Calibri text-dark hover:text-primary transition-colors" aria-label="Search">
               <Search className="w-10 h-10 md:w-5 md:h-5" strokeWidth={2.2} />
             </button>
 

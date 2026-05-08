@@ -21,9 +21,9 @@ export default function InstagramSection() {
     <section className="w-full bg-[#F5F3EC] pt-[56px] pb-[40px]">
       <div className="container-site px-[48px] flex flex-col gap-[28px]">
         <div className="mb-10 flex items-end justify-between gap-4">
-          <h2 className="font-brand text-[28px] font-bold uppercase leading-none text-[#1f241f] md:text-[34px]">
+          <h2 className="font-brand text-[28px] font-bold uppercase leading-none text-black-primary md:text-[34px]">
             FROM{" "}
-            <span className="font-normal italic text-[#9f8428]">
+            <span className="font-normal italic text-gold-primary">
               OUR TRAVELS
             </span>
           </h2>
